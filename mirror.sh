@@ -20,35 +20,50 @@ is_wsl() {
 	* ) false;;
 	esac
 }
+command_exists() {
+	command -v "$@" > /dev/null 2>&1
+}
 lsb_dist=$( get_distribution )
 lsb_dist="$(echo "$lsb_dist" | tr '[:upper:]' '[:lower:]')"
 timefix=$(date +%Y%m%d_%H%M%S)
 if is_wsl; then
     echo "WSL DETECTED: OH No!"
-    exit
+    exit 1
 fi
-
+sh_c='sh -c'
+if [ "$user" != 'root' ]; then
+    if command_exists sudo; then
+        sh_c='sudo -E sh -c'
+    elif command_exists su; then
+        sh_c='su -c'
+    else
+        echo 'Error: this installer needs the ability to run commands as root.'
+        echo 'We are unable to find either "sudo" or "su" available to make this happen.'
+        exit 1
+    fi
+fi
 case "$lsb_dist" in
     ubuntu)
-        sudo cp /etc/apt/sources.list /etc/apt/sources.list.$timefix.bak
-        sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+        $sh_c "cp /etc/apt/sources.list /etc/apt/sources.list.$timefix.bak"
+        $sh_c "sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list"
     ;;
 
     debian)
-        sudo cp /etc/apt/sources.list /etc/apt/sources.list.$timefix.bak
-        sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-        sudo sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
-        apt update; apt install -y apt-transport-https;
+        $sh_c "cp /etc/apt/sources.list /etc/apt/sources.list.$timefix.bak"
+        $sh_c "sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list"
+        $sh_c "sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list"
+        $sh_c "apt-get update -qq >/dev/null"
+        $sh_c "apt install -y apt-transport-https;"
     ;;
 
     centos|rhel)
         echo "Centos DETECTED: will be support!"
-        exit
+        exit 1
     ;;
 
     *)
         echo "$lsb_dist DETECTED: will be support!"
-        exit
+        exit 1
     ;;
 
 esac
