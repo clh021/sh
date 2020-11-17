@@ -3,21 +3,11 @@
 #### 介绍
 exec shell script by curl
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+##### mirror.sh
+经常会需要在搭建的 docker 镜像中安装一些工具，虽然并不是非常的频繁，但是如果有一个命令脚本自动处理好所有容器的镜像源，那将是极好的！
+> curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sudo sh
 
 #### 参与贡献
 

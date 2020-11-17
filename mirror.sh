@@ -1,4 +1,6 @@
 #!/bin/bash
+# 脚本目标：
+# 经常会需要在搭建的 docker 镜像中安装一些工具，虽然并不是非常的频繁，但是如果有一个命令脚本自动处理好所有容器的镜像源，那将是极好的！
 # 使用方法：
 # curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sudo sh
 set -e
@@ -54,6 +56,7 @@ case "$lsb_dist" in
         $sh_c "sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list"
         $sh_c "apt-get update -qq >/dev/null"
         $sh_c "apt install -y apt-transport-https;"
+        $sh_c "sed -i 's/http:/https:/g' /etc/apt/sources.list"
     ;;
 
     centos|rhel)
