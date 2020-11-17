@@ -13,6 +13,13 @@ get_distribution() {
 	# case statements don't act unless you provide an actual value
 	echo "$lsb_dist"
 }
+is_wsl() {
+	case "$(uname -r)" in
+	*microsoft* ) true ;; # WSL 2
+	*Microsoft* ) true ;; # WSL 1
+	* ) false;;
+	esac
+}
 lsb_dist=$( get_distribution )
 lsb_dist="$(echo "$lsb_dist" | tr '[:upper:]' '[:lower:]')"
 timefix=$(date +%Y%m%d_%H%M%S)
