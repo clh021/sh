@@ -10,7 +10,9 @@ exec shell script by curl
 > curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sudo sh
 
 ##### 测试记录
-[-] debian(buster)
+- [x] debian(buster)
+- [ ] ubuntu
+- [ ] centos
 
 #### 参与贡献
 
