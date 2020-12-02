@@ -20,7 +20,7 @@ RUN curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sh
 
 ##### 测试记录
 - [x] debian(buster)
-- [x] alpine
+- [x] alpine(3.12)
 - [ ] ubuntu
 - [ ] centos
 
