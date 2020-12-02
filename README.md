@@ -17,7 +17,15 @@ FROM php:7.3-apache
 RUN curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sh
 ......
 ```
+或者
 
+```Dockerfile
+FROM alpine:latest
+MAINTAINER leehom Chen <clh021@gmail.com>
+RUN wget https://gitee.com/clh21/sh/raw/master/mirror.sh && sh ./mirror.sh; rm -f mirror.sh
+RUN apk update\
+    && apk add git
+```
 ##### 测试记录
 - [x] debian(buster)
 - [x] alpine(3.12)
