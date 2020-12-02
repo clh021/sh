@@ -2,7 +2,8 @@
 # 脚本目标：
 # 经常会需要在搭建的 docker 镜像中安装一些工具，虽然并不是非常的频繁，但是如果有一个命令脚本自动处理好所有容器的镜像源，那将是极好的！
 # 使用方法：
-# curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sudo sh
+# curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sudo sh  #debian...
+# wget https://gitee.com/clh21/sh/raw/master/mirror.sh && sudo sh ./mirror.sh; rm -f mirror.sh #alpine...
 set -e
 set -x
 get_distribution() {
@@ -48,6 +49,11 @@ case "$lsb_dist" in
     ubuntu)
         $sh_c "cp /etc/apt/sources.list /etc/apt/sources.list.$timefix.bak"
         $sh_c "sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list"
+    ;;
+
+    alpine)
+        $sh_c "cp /etc/apk/repositories /etc/apk/repositories.$timefix.bak"
+        $sh_c "sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories"
     ;;
 
     debian)
