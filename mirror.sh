@@ -54,6 +54,7 @@ case "$lsb_dist" in
     alpine)
         $sh_c "cp /etc/apk/repositories /etc/apk/repositories.$timefix.bak"
         $sh_c "sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories"
+        $sh_c "sed -i 's/http:/https:/g' /etc/apk/repositories"
     ;;
 
     debian)
