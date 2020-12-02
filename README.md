@@ -8,7 +8,8 @@ exec shell script by curl
 ##### mirror.sh
 在搭建的 docker 镜像中有时会临时需要安装一些工具(比如 vim)，如果有一个方法能一键解决软件仓库镜像源的问题，那将是极好的！
 ```sh
-curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sudo sh
+curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sudo sh  #debian...
+wget https://gitee.com/clh21/sh/raw/master/mirror.sh && sh ./mirror.sh; rm -f mirror.sh #alpine...
 ```
 自己构建 docker 镜像时，也可以一行代码实现加速
 ```Dockerfile
@@ -19,6 +20,7 @@ RUN curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sh
 
 ##### 测试记录
 - [x] debian(buster)
+- [x] alpine
 - [ ] ubuntu
 - [ ] centos
 
