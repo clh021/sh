@@ -27,8 +27,8 @@ RUN apk update\
     && apk add git
 ```
 ##### 测试记录
-- [x] debian(buster)
-- [x] alpine(3.12)
+- [x] debian(buster|10)
+- [x] alpine(3.12,3.11)
 - [ ] ubuntu
 - [ ] centos
 
