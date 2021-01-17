@@ -1,0 +1,211 @@
+" https://www.iteye.com/blog/kidneyball-1828427
+" https://zx0211.gitee.io/2018/idea-vim/
+" https://www.thisfaner.com/p/idea-vim/
+" https://einverne.github.io/post/2020/07/idea-vim-usage.html
+" https://cloud.tencent.com/developer/article/1525244
+" https://www.zhihu.com/question/20783392
+" https://segmentfault.com/a/1190000007061930
+" https://isudox.com/2016/07/26/scheme-of-ideavim-keymap/
+" https://www.dazhuanlan.com/2020/02/21/5e4fd919c639c/
+" https://www.jianshu.com/p/ddd56ceeb83d
+" https://blog.csdn.net/niuzaiwenjie/article/details/79634583
+" https://www.cnblogs.com/zhaozihan/p/6297217.html#:~:text=IdeaVim%E6%98%AFIntelliJ%20IDEA%E7%9A%84%E4%B8%80%E6%AC%BE%E6%8F%92%E4%BB%B6%EF%BC%8C%E4%BB%96%E6%8F%90%E9%AB%98%E4%BA%86%E6%88%91%E4%BB%AC%E5%86%99%E4%BB%A3%E7%A0%81%E7%9A%84%E9%80%9F%E5%BA%A6%EF%BC%8C%E5%AF%B9%E4%BB%A3%E7%A0%81%E7%9A%84%E8%B7%B3%E8%BD%AC%EF%BC%8C%E6%9F%A5%E6%89%BE%E4%B9%9F%E5%BE%88%E5%8F%8B%E5%A5%BD%E3%80%82%20%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%20%E5%AE%89%E8%A3%85%E4%B9%8B%E5%90%8E%E5%AE%83%E5%9C%A8%20Tools%20%3E,Vim%20Emulator%20%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C%20i%E6%A8%A1%E5%BC%8F%20i%E6%A8%A1%E5%BC%8F%E5%8D%B3%E4%B8%BA%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%EF%BC%8C%E6%8C%89%E4%B8%8B%E5%AD%97%E6%AF%8Di%E5%BC%80%E5%90%AF%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%89%93%E5%AD%97%E3%80%82%20Esc%20%E4%BB%8Ei%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%E4%B8%BAVim%EF%BC%8C%E6%8C%89%E4%B8%8B%E9%94%AE%E7%9B%98%E7%9A%84Esc%E9%94%AE%E5%88%87%E5%9B%9EVim%E3%80%82
+" https://www.jb51.net/article/187007.htm
+
+" 主要leader
+let mapleader=' '
+" 搜索高亮
+set hlsearch
+" 模式搜索实时预览，增量搜索
+set incsearch
+" 忽略大小写
+set ignorecase
+" 智能忽略大小写
+set smartcase
+" 显示当前的模式
+set showmode
+" 显示当前行号
+set number
+" set relativenumber
+set scrolloff=3
+" 设置命令历史记录条数"
+set history=100
+" 共享系统粘贴板"
+set clipboard=unnamed
+" j基于缩进或语法进行代码折叠
+set foldmethod=indent
+set foldmethod=syntax
+" 启动vim 时关闭折叠代码
+set nofoldenable
+" 关闭兼容vi"
+set nocompatible
+" 开启高亮语法"
+syntax enable
+" 允许使用指定语法高亮配色方案替换默认方案"
+
+syntax on
+" vim 智能命令行模式智能不全"
+set wildmenu
+" 总是显示状态栏"
+set laststatus=2
+" 显示光标当前位置"
+set ruler
+" 禁止折行 "
+set nowrap
+" 将制表符扩展为空格 "
+set expandtab
+" 设置编辑时制表符占用空格数"
+set shiftwidth=1
+" 中英文自动切换
+set keep-english-in-normal-and-restore-in-insert
+
+
+vnoremap <Leader>ec :action ExtractMethod<CR>
+" Quit visual mode
+vnoremap v <Esc>
+
+" clear the highlighted search result
+nnoremap <Leader>sc :nohlsearch<CR>
+
+nnoremap <Leader>sd :w!<CR>
+
+nnoremap <Leader>sq :wq!<CR>
+
+nnoremap <C-C> <Esc>
+" 断行
+nnoremap <CR> a<CR><Esc>k$
+" project search
+nnoremap <Leader>fu :action FindUsages<CR>
+
+" Quit normal mode
+nnoremap <Leader>qu  :q<CR>
+nnoremap <Leader>Q  :qa!<CR>
+
+
+" Insert mode shortcut
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-d> <Delete>
+
+" Quit insert mode
+inoremap jk <Esc>
+
+" Move to the start of line
+" nnoremap H ^
+
+" Move to the end of line
+" nnoremap L $
+
+" Yank to the end of line
+" nnoremap Y y$
+
+
+" Window operation
+nnoremap <Leader>ww <C-W>w
+nnoremap <Leader>wd <C-W>c
+nnoremap <Leader>wj <C-W>j
+nnoremap <Leader>wk <C-W>k
+nnoremap <Leader>wh <C-W>h
+nnoremap <Leader>wl <C-W>l
+nnoremap <Leader>ws <C-W>s
+nnoremap <Leader>w- <C-W>s
+nnoremap <Leader>wv <C-W>v
+nnoremap <Leader>w\| <C-W>v
+
+" Tab operation
+nnoremap gn gt
+nnoremap gp gT
+
+" ==================================================
+" Show all the provided actions via `:actionlist` , https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+" ==================================================
+" 单行 注释"
+nnoremap <Leader>;; :action CommentByLineComment<CR>
+" 可是模式下，选择区域注释"
+vnoremap <Leader>;/ :action CommentByBlockComment<CR>
+" 对z命令的追加，z一般用于光标调整，用得比较少，所以是一个比较好的选择，注意和原命令重复"
+" 实现方法
+nnoremap zi :action ImplementMethods<CR>
+" 重写方法"
+nnoremap zo :action OverrideMethods<CR>
+" 重新格式化代码"
+nnoremap <Leader>fc :action ReformatCode<CR>
+" 运行class的主方法"
+nnoremap <Leader>rm :action RunClass<CR>
+" 新建class"
+nnoremap <Leader>nc :action NewClass<CR>
+nnoremap <Leader>br :action ViewBreakpoints<CR>
+nnoremap <Leader>cv :action ChangeView<CR>
+nnoremap <Leader>cd :action ChooseDebugConfiguration<CR>
+nnoremap <Leader>cr :action ChooseRunConfiguration<CR>
+nnoremap <Leader>rr :action Run<CR>
+" 修正文档注释，没有自动添加"
+nnoremap <Leader>dc :action FixDocComment<CR>
+nnoremap <Leader>dd :action Debug<CR>
+nnoremap <Leader>rs :action Stop<CR>
+
+nnoremap <Leader>gs :action GotoSuperMethod<CR>
+nnoremap <Leader>fp :action ShowFilePath<CR>
+nnoremap <Leader>ic :action InspectCode<CR>
+nnoremap <Leader>oi :action OptimizeImports<CR>
+nnoremap <Leader>pm :action ShowPopupMenu<CR>
+nnoremap <Leader>rc :action RunToCursor<CR>
+nnoremap <Leader>re :action RenameElement<CR>
+nnoremap <Leader>rf :action RenameFile<CR>
+nnoremap <Leader>rr :action Rerun<CR>
+nnoremap <Leader>se :action SearchEverywhere<CR>
+nnoremap <Leader>su :action ShowUsages<CR>
+nnoremap <Leader>tc :action CloseActiveTab<CR>
+nnoremap <Leader>si :action StepInto<CR>
+
+"  继承关系"
+nnoremap <Leader>th :action TypeHierarchy<CR>
+nnoremap <Leader>tb :action ToggleLineBreakpoint<CR>
+
+nnoremap gi :action GotoImplementation<CR>
+nnoremap ga :action GotoAction<CR>
+nnoremap gc :action GotoClass<CR>
+nnoremap gf :action GotoFile<CR>
+nsoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSymbol<CR>
+nnoremap ge :action ShowErrorDescription<CR>
+
+nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
+vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
+
+
+
+" 默认开启关闭vim模拟器是 Ctrl + Alt + V
+" 设置为 ctrl + ;
+" 快捷键	JetBrains IDE 功能	Vim 功能
+" Ctrl+2	Project Directory √	空缺
+" Ctrl+Shift+2	插入/取消标记 2 √	空缺
+" Ctrl+Shift+6	插入/取消标记 6 √	空缺
+" Ctrl+A	全选 √	光标所在数字递增
+" Ctrl+B	跳转至引用 √	向上翻一屏
+" Ctrl+C	复制	退出插入模式 √
+" Ctrl+D	复写当前行	向下翻半屏 √
+" Ctrl+E	打开最近的文档 （改成 C_A + R）	向下滚动行 √
+" Ctrl+F	查找 √	向下翻一屏
+" Ctrl+G	跳转到指定行	打印当前文件名 √
+" Ctrl+H	当前类型的继承关系 （改为 Alt + H）	光标退格 √
+" Ctrl+I	Implement 方法 （改为 Alt + I）	跳转到 Jump List 下一个位置 √
+" Ctrl+M	光标所在行滚动到屏幕中央 （改为 Alt + M）	移动到下一行的首个非空字符 √
+" Ctrl+N	查找指定 Class （改为 Alt + N）	移动到下一行，光标相对位置不变 √
+" Ctrl+O	Override 方法 （改为 Alt + O）	跳转到 Jump List 上一位置 √
+" Ctrl+P	Show/Hide path text （改为 Alt + P）	移动到上一行，光标相对位置不变 √
+" Ctrl+Q	Quick Documentation （改为 C_A + Q）	代替 Ctrl-V 开启 Visual
+" Ctrl+R	替换文本 （改为 Alt + R）	恢复上一次修改 √
+" Ctrl+S	保存全部改动 √	分割窗口
+" Ctrl+T	更新工程 （改为 Alt + T）	跳转到 Tag Stack 上一位置 √
+" Ctrl+U	跳转至父类方法 （改为 Alt + U）	向上翻半屏 √
+" Ctrl+V	粘贴 √	开启 Visual 模式
+" Ctrl+W	智能选中 （改为 Alt + W）	窗口命令，后接具体指令
+" Ctrl+X	剪切 √	光标所在数字递减
+" Ctrl+Y	删除光标所在行	向上滚动行 √
+" Ctrl+[	光标移动到代码块的起始位置 （改为 Alt + [）	退出插入模式 √
+" Ctrl+]	光标移动到代码块的结束位置 （改为 Alt + ]）	跳转到关键字的声明处 √
