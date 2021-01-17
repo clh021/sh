@@ -9,7 +9,6 @@
 " https://www.dazhuanlan.com/2020/02/21/5e4fd919c639c/
 " https://www.jianshu.com/p/ddd56ceeb83d
 " https://blog.csdn.net/niuzaiwenjie/article/details/79634583
-" https://www.cnblogs.com/zhaozihan/p/6297217.html#:~:text=IdeaVim%E6%98%AFIntelliJ%20IDEA%E7%9A%84%E4%B8%80%E6%AC%BE%E6%8F%92%E4%BB%B6%EF%BC%8C%E4%BB%96%E6%8F%90%E9%AB%98%E4%BA%86%E6%88%91%E4%BB%AC%E5%86%99%E4%BB%A3%E7%A0%81%E7%9A%84%E9%80%9F%E5%BA%A6%EF%BC%8C%E5%AF%B9%E4%BB%A3%E7%A0%81%E7%9A%84%E8%B7%B3%E8%BD%AC%EF%BC%8C%E6%9F%A5%E6%89%BE%E4%B9%9F%E5%BE%88%E5%8F%8B%E5%A5%BD%E3%80%82%20%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%20%E5%AE%89%E8%A3%85%E4%B9%8B%E5%90%8E%E5%AE%83%E5%9C%A8%20Tools%20%3E,Vim%20Emulator%20%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C%20i%E6%A8%A1%E5%BC%8F%20i%E6%A8%A1%E5%BC%8F%E5%8D%B3%E4%B8%BA%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%EF%BC%8C%E6%8C%89%E4%B8%8B%E5%AD%97%E6%AF%8Di%E5%BC%80%E5%90%AF%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%89%93%E5%AD%97%E3%80%82%20Esc%20%E4%BB%8Ei%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%E4%B8%BAVim%EF%BC%8C%E6%8C%89%E4%B8%8B%E9%94%AE%E7%9B%98%E7%9A%84Esc%E9%94%AE%E5%88%87%E5%9B%9EVim%E3%80%82
 " https://www.jb51.net/article/187007.htm
 
 " 文件目标：使用 .ideavimrc 达到习惯体验，尽量不依赖 idea 的配置定制
@@ -210,3 +209,10 @@ vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 " Ctrl+Y	删除光标所在行	向上滚动行 √
 " Ctrl+[	光标移动到代码块的起始位置 （改为 Alt + [）	退出插入模式 √
 " Ctrl+]	光标移动到代码块的结束位置 （改为 Alt + ]）	跳转到关键字的声明处 √
+
+" 教程集
+" 光标移动 hjkl,w(空格符号)W(空格)b,f指定字符(正向跳转到指定字符),F(反向),t指定字符(正向跳转到指定字符的上一个位置),T(反向)
+"          *(跳转至下一个与当前光标相同字符的位置),#(上一个)
+"          gg(文件头),G(文件尾),行号G(跳至指定行的开头)
+" 复制粘贴 yy,p(光标下一行),10p
+" 删除撤销 5dd,u,x(正向删除),X(反向),df指定字符(从光标处删除至指定字符),di(删除引号内的内容),da(删除包含引号在内的内容)
