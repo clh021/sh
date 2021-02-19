@@ -66,6 +66,11 @@ case "$lsb_dist" in
         $sh_c "sed -i 's/http:/https:/g' /etc/apt/sources.list"
     ;;
 
+    arch)
+        $sh_c "echo > /etc/pacman.d/mirrorlist"
+        $sh_c "echo Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch"
+    ;;
+
     centos|rhel)
         echo "Centos DETECTED: will be support!"
         exit 1
