@@ -68,7 +68,7 @@ case "$lsb_dist" in
 
     arch)
         $sh_c "echo > /etc/pacman.d/mirrorlist"
-        $sh_c "echo Server = http://mirrors.aliyun.com/archlinux/\$repo/os/\$arch"
+        $sh_c 'echo \'Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch\' > /etc/pacman.d/mirrorlist'
     ;;
 
     centos|rhel)
