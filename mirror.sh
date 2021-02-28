@@ -46,8 +46,7 @@ if [ "$user" != 'root' ]; then
     fi
 fi
 case "$lsb_dist" in
-    neon)
-    ubuntu)
+    neon | ubuntu)
         $sh_c "cp /etc/apt/sources.list /etc/apt/sources.list.$timefix.bak"
         $sh_c "sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list"
     ;;
