@@ -49,6 +49,7 @@ case "$lsb_dist" in
     neon | ubuntu)
         $sh_c "cp /etc/apt/sources.list /etc/apt/sources.list.$timefix.bak"
         $sh_c "sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list"
+        $sh_c "sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list"
     ;;
 
     alpine)
