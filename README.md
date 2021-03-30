@@ -36,7 +36,7 @@ RUN apk update\
 #### archlinux_install.sh
 
 ##### 使用说明
-```
+```sh
 bash -c "$(curl -fsSL https://gitee.com/clh21/sh/raw/master/archlinux_install.sh)"
 ```
 
