@@ -36,6 +36,15 @@ RUN apk update\
 #### archlinux_install.sh
 
 ##### 使用说明
+启动进入 archlinux 系统镜像
+1. 连接网络
+```sh
+iwctl
+device list
+station device get-networks
+station device connect SSID
+```
+2. 执行脚本
 ```sh
 bash -c "$(curl -fsSL https://gitee.com/clh21/sh/raw/master/archlinux_install.sh)"
 ```

@@ -19,7 +19,7 @@ function print_line() {
     printf "%$(tput cols)s\n" | tr ' ' '-'
 }
 
-function print_error() { 
+function print_error() {
     T_COLS=`tput cols`
     echo -e "\n\n${BRed}$1${Reset}\n" | fold -sw $(( $T_COLS - 1 ))
     sleep 3
@@ -44,20 +44,20 @@ function print_info() {
     echo -e "${Bold}$1${Reset}\n" | fold -sw $(( $T_COLS - 18)) | sed 's/^/\t/'
 }
 
-function checkbox() { 
+function checkbox() {
     #display [X] or [ ]
     [[ "$1" -eq 1 ]] && echo -e "${BBlue}[${Reset}${Bold}X${BBlue}]${Reset}" || echo -e "${BBlue}[ ${BBlue}]${Reset}";
 }
 
-function mainmenu_item() { 
+function mainmenu_item() {
     #if the task is done make sure we get the state
-    if  [[ $3 != "" ]] && [[ $3 != "/" ]]; then    
+    if  [[ $3 != "" ]] && [[ $3 != "/" ]]; then
         state="${BGreen}[${Reset}$3${BGreen}]${Reset}"
     else
         state="${BGreen}[${Reset}Not Set${BGreen}]${Reset}"
     fi
     echo -e "$(checkbox "$1") ${Bold}$2${Reset} ${state}"
-} 
+}
 
 function invalid_option() {
     print_line
@@ -99,7 +99,7 @@ function unique_elements() {
 
 function confirm_operation() {
     read -p "${BYellow}$1 [y/N]: ${Reset}" OPTION
-    OPTION=`echo "${OPTION}" | tr '[:upper:]' '[:lower:]'`    
+    OPTION=`echo "${OPTION}" | tr '[:upper:]' '[:lower:]'`
 }
 
 
@@ -114,7 +114,7 @@ function set_password() {
             break
         fi
         echo "Please try again"
-    done 
+    done
 }
 
 function arch_chroot() {
@@ -168,7 +168,7 @@ function select_mirrorlist() {
         fi
         break
     done
-    
+
 }
 
 function configure_mirrorlist() {
@@ -211,7 +211,7 @@ function select_device() {
     PS3=${PROMPT_1}
     echo -e "Select device to install Arch Linux:\n"
     select device in "${devices_list[@]}"; do
-        if contains_element ${device} ${devices_list[@]}; then 
+        if contains_element ${device} ${devices_list[@]}; then
             confirm_operation "Data on ${device} will be damaged"
             break
         else
@@ -228,7 +228,7 @@ function select_device() {
 }
 
 function format_devices() {
-    # TODO 
+    # TODO
     # Support LVM?
     sgdisk --zap-all ${INSTALL_DEVICE}
     local boot_partion="${INSTALL_DEVICE}1"
@@ -293,17 +293,17 @@ function configure_locale() {
 function set_hostname() {
     local result
     read -p "Input your Hostname[ex: ${HOSTNAME}}]: " result
-    if [[ ! -z ${result} ]]; then 
+    if [[ ! -z ${result} ]]; then
         HOSTNAME=${result}
     fi
 }
 
 function configure_hostname() {
-    if [[ -e "${MOUNT_POINT}/etc/hostname" ]]; then 
-        mv  -f "${MOUNT_POINT}/etc/hostname" "${MOUNT_POINT}/etc/hostname.orig" 
+    if [[ -e "${MOUNT_POINT}/etc/hostname" ]]; then
+        mv  -f "${MOUNT_POINT}/etc/hostname" "${MOUNT_POINT}/etc/hostname.orig"
     fi
-    if [[ -e "${MOUNT_POINT}/etc/hosts" ]]; 
-        then mv  -f "${MOUNT_POINT}/etc/hosts" "${MOUNT_POINT}/etc/hosts.orig" 
+    if [[ -e "${MOUNT_POINT}/etc/hosts" ]];
+        then mv  -f "${MOUNT_POINT}/etc/hosts" "${MOUNT_POINT}/etc/hosts.orig"
     fi
 
     echo "${HOSTNAME}" > "${MOUNT_POINT}/etc/hostname"
@@ -327,10 +327,10 @@ function configure_user() {
 function set_login_user() {
     local result
     read -p "Input login user name[ex: ${USER_NAME}]: " result
-    if [[ ! -z ${result} ]]; then 
+    if [[ ! -z ${result} ]]; then
         USER_NAME=${result}
     fi
-    
+
     set_password ${USER_NAME} USER_PASSWORD ${USER_PASSWORD}
 }
 
@@ -380,7 +380,8 @@ function system_install() {
     configure_mirrorlist
 
     # Install system-base
-    yes '' | pacstrap -i /mnt base linux linux-firmware grub os-prober openssh git zsh
+    print_info "NetworkManager installed and you can use nmcli and nmtui command."
+    yes '' | pacstrap -i /mnt base linux linux-firmware grub os-prober openssh git zsh sudo networkmanager ntp neovim xclip vim
     yes '' | genfstab -U /mnt >> /mnt/etc/fstab
 
     configure_timezone
@@ -390,7 +391,7 @@ function system_install() {
 
     bootloader_install
 
-    arch_chroot "systemctl enable dhcpcd sshd"
+    arch_chroot "systemctl enable dhcpcd sshd NetworkManager"
 }
 
 function install() {
@@ -401,7 +402,7 @@ function install() {
         print_line
         confirm_operation "Do you want to reboot system?"
         if [[ ${OPTION} == "y" ]]; then
-           reboot 
+           reboot
         fi
         exit 0
     else
