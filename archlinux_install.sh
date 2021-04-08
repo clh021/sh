@@ -1,4 +1,9 @@
 #!/bin/bash
+# 建议先执行的操作
+# iwctl
+# device list
+# station [device] get-networks
+# station [device] connect [SSID]
 
 # COLORS {{{
     Bold=$(tput bold)

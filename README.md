@@ -41,8 +41,8 @@ RUN apk update\
 ```sh
 iwctl
 device list
-station device get-networks
-station device connect SSID
+station [device] get-networks
+station [device] connect [SSID]
 ```
 2. 执行脚本
 ```sh
