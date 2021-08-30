@@ -28,6 +28,7 @@ RUN apk update\
     && apk add git
 ```
 ##### 测试记录
+- [x] archlinux
 - [x] debian(buster|10)
 - [x] alpine(3.12,3.11)
 - [ ] ubuntu
