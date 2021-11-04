@@ -30,7 +30,7 @@ RUN apk update\
 ```
 ##### 测试记录
 - [x] archlinux
-- [x] debian(buster|10)
+- [x] debian(buster|10,bullseye|11)
 - [x] alpine(3.12,3.11)
 - [ ] ubuntu
 - [ ] centos
