@@ -32,7 +32,7 @@ RUN apk update\
 - [x] archlinux
 - [x] debian(buster|10,bullseye|11)
 - [x] alpine(3.12,3.11)
-- [ ] ubuntu
+- [x] ubuntu(16.04)
 - [ ] centos
 
 #### archlinux_install.sh
