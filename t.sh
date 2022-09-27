@@ -1,6 +1,15 @@
 #!/bin/bash
 #wget https://gitee.com/clh21/sh/raw/master/t.sh
-git clone --depth=1 https://clh21@gitee.com/perfbenchmark/ui-detect.git
+
+
+if [ -f "ui-detect/README.md" ]; then
+    pushd ui-detect > /dev/null
+    git pull
+    popd > /dev/null
+else
+    git clone --depth=1 https://clh21@gitee.com/perfbenchmark/ui-detect.git
+fi
+
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 
