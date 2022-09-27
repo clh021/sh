@@ -5,3 +5,7 @@ export GOPROXY=https://goproxy.cn
 
 echo export GO111MODULE=on
 echo export GOPROXY=https://goproxy.cn
+
+pip3 install reportlab
+pip3 install PyPDF2
+pip3 install pyinstaller
