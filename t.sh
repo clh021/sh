@@ -12,3 +12,6 @@ pip3 install pyinstaller
 
 echo pyinstaller -F report.py
 echo ~/.local/bin/pyinstaller -F report.py
+
+echo git config user.email "clh021@gmail.com"
+echo git config user.name "chenlianghong"
