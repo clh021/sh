@@ -11,3 +11,4 @@ pip3 install PyPDF2
 pip3 install pyinstaller
 
 echo pyinstaller -F report.py
+echo ~/.local/bin/pyinstaller -F report.py
