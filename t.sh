@@ -25,3 +25,8 @@ pip3 install pyinstaller
 
 echo pyinstaller -F report.py
 echo ~/.local/bin/pyinstaller -F report.py
+
+# go get github.com/yudai/gotty
+go get github.com/sorenisanerd/gotty
+echo go get github.com/yudai/gotty
+echo go get github.com/sorenisanerd/gotty
