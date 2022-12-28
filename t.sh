@@ -2,6 +2,20 @@
 #wget https://gitee.com/clh21/sh/raw/master/t.sh
 
 
+ceprei ceprei1 uosuos Uosuos123
+| cpu       | os       | arch     | id        | key    | pwd | report | detect | child |
+| --------- | -------- | -------- | --------- | ------ | --- | ------ | ------ | ----- |
+| 华为麒麟   | kylinV10 |          | 954927413 |        |     |        |        |       |
+| 华为麒麟   | uos      |          | 954927413 |        |     |        |        |       |
+| loongArch | uos      | loong64  | 454092710 | c      |     |        |        |       |
+| 兆芯       | uos      | amd64    | 442229937 |        |     |        |        |       |
+| 海芯       | uos      | amd64    | 411133862 | c      |     |        |        |       |
+| 飞腾       | uos      | arm64    | 117396102 | c      |  u  |        |        |       |
+| 飞腾       | kylinV10 | arm64    | 117396102 | c      |  c  |        |        |       |
+| 鲲鹏       | uos      | arm64    | 341567454 |        |  c1 |        |        |       |
+| 龙芯       | uos      | mips64le | 126601258 | c      |     |        |        |       |
+
+
 if [ -f "ui-detect/README.md" ]; then
     pushd ui-detect > /dev/null
     git pull
@@ -30,17 +44,3 @@ echo ~/.local/bin/pyinstaller -F report.py
 go get github.com/sorenisanerd/gotty
 echo go get github.com/yudai/gotty
 echo go get github.com/sorenisanerd/gotty
-
-
-ceprei ceprei1 uosuos Uosuos123
-| cpu       | os       | arch     | id        | key    | pwd | report | detect | child |
-| --------- | -------- | -------- | --------- | ------ | --- | ------ | ------ | ----- |
-| 华为麒麟   | kylinV10 |          | 954927413 |        |     |        |        |       |
-| 华为麒麟   | uos      |          | 954927413 |        |     |        |        |       |
-| loongArch | uos      | loong64  | 454092710 | c      |     |        |        |       |
-| 兆芯       | uos      | amd64    | 442229937 |        |     |        |        |       |
-| 海芯       | uos      | amd64    | 411133862 |        |     |        |        |       |
-| 飞腾       | uos      | arm64    | 117396102 |        |  u  |        |        |       |
-| 飞腾       | kylinV10 | arm64    | 117396102 | c      |  c  |        |        |       |
-| 鲲鹏       | uos      | arm64    | 341567454 |        |  c1 |        |        |       |
-| 龙芯       | uos      | mips64le | 126601258 | c      |     |        |        |       |
