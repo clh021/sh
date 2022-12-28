@@ -8,7 +8,7 @@ ceprei ceprei1 uosuos Uosuos123
 | 华为麒麟   | kylinV10 |          | 954927413 |        |     |        |        |       |
 | 华为麒麟   | uos      |          |           |        |     |        |        |       |
 | loongArch | uos      | loong64  | 454092710 | c      |  c  |        |        |       |
-| 兆芯       | uos      | amd64    | 442229937 |        |     |        |        |       |
+| 兆芯       | uos      | amd64    | 442229937 | c2     |     |        |        |       |
 | 海芯       | uos      | amd64    | 411133862 | c      |     |        |        |       |
 | 飞腾       | uos      | arm64    |           | c      |  u  |        |        |       |
 | 飞腾       | kylinV10 | arm64    | 117396102 | c      |  c  |        |        |       |
