@@ -2,7 +2,7 @@
 #wget https://gitee.com/clh21/sh/raw/master/t.sh
 
 
-ceprei ceprei1 uosuos Uosuos123
+ceprei ceprei1 ceprei@123 uosuos Uosuos123
 | cpu       | os       | arch     | id        | key    | pwd | report | detect | child |
 | --------- | -------- | -------- | --------- | ------ | --- | ------ | ------ | ----- |
 | 华为麒麟   | kylinV10 |          | 954927413 |        |     |        |        |       |
@@ -11,7 +11,7 @@ ceprei ceprei1 uosuos Uosuos123
 | 兆芯       | uos      | amd64    | 442229937 | c2     |     |        |        |       |
 | 海芯       | uos      | amd64    | 411133862 | c      |     |        |        |       |
 | 飞腾       | uos      | arm64    |           | c      |  u  |        |        |       |
-| 飞腾       | kylinV10 | arm64    | 117396102 | c      |  c  |        |        |       |
+| 飞腾       | kylinV10 | arm64    | 117396102 | c      |  c@ |        |        |       |
 | 鲲鹏       | uos      | arm64    | 341567454 | c      |  c1 |        |        |       |
 | 龙芯       | uos      | mips64le | 126601258 | c      |  c  |        |        |       |
 
