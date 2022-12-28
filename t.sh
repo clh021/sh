@@ -12,7 +12,7 @@ ceprei ceprei1 uosuos Uosuos123
 | 海芯       | uos      | amd64    | 411133862 | c      |     |        |        |       |
 | 飞腾       | uos      | arm64    |           | c      |  u  |        |        |       |
 | 飞腾       | kylinV10 | arm64    | 117396102 | c      |  c  |        |        |       |
-| 鲲鹏       | uos      | arm64    | 341567454 |        |  c1 |        |        |       |
+| 鲲鹏       | uos      | arm64    | 341567454 | c      |  c1 |        |        |       |
 | 龙芯       | uos      | mips64le | 126601258 | c      |  c  |        |        |       |
 
 
