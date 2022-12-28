@@ -14,7 +14,7 @@ ceprei ceprei1 ceprei@123 uosuos Uosuos123
 | *         |anolisos8.6| amd64   | *         | *      |  *  | 2.28   |         | amd64  |
 | 飞腾       | uos      | arm64    |           | c      |  u  |        |         |        |
 | 飞腾       | kylinV10 | arm64    | 117396102 | c      |  c@ | 2.29   |         |        |
-| 鲲鹏       | uos      | arm64    | 341567454 | c      |  c1 | 2.28   | arm64   |        |
+| 鲲鹏       | uos      | arm64    | 341567454 | c      |  c1 | 2.28   | arm64   | arm64  |
 | 龙芯       | uos      | mips64le | 126601258 | c      |  c  | 2.28   | mips64le|mips64le|
 
 
