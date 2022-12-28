@@ -16,6 +16,7 @@ ceprei ceprei1 ceprei@123 uosuos Uosuos123
 | 飞腾       | kylinV10 | arm64    | 117396102 | c      |  c@ | 2.29   |         |        |
 | 鲲鹏       | uos      | arm64    | 341567454 | c      |  c1 | 2.28   | arm64   | arm64  |
 | 龙芯       | uos      | mips64le | 126601258 | c      |  c  | 2.28   | mips64le|mips64le|
+| *         | kylinV10 | sw64     | *         | *      |  *  | 2.28   | sw64    | sw64   |
 
 
 if [ -f "ui-detect/README.md" ]; then
