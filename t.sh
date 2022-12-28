@@ -1,7 +1,6 @@
 #!/bin/bash
 #wget https://gitee.com/clh21/sh/raw/master/t.sh
 
-
 ceprei ceprei1 ceprei@123 uosuos Uosuos123
 | cpu       | os       | arch     | id        | key    | pwd | glibc  | buildin |  test  |
 | --------- | -------- | -------- | --------- | ------ | --- | ------ | ------- | ------ |
