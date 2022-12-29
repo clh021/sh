@@ -9,7 +9,8 @@ ceprei ceprei1 ceprei@123 uosuos Uosuos123
 | loongArch | uos      | loong64  | 454092710 | c      |  c  | 2.28   | loong64 |loong64 |
 | 兆芯       | uos      | amd64    | 442229937 | c2     |     | 2.28   |         |        |
 | 海芯       | uos      | amd64    | 411133862 | c      |     | 2.28   |         |        |
-| *         | centos7  | amd64    | *         | *      |  *  | 2.17   | amd64   | amd64  |
+| *         | centos7  | amd64    | 702212565 | c      |  *  | 2.17   | amd64   | amd64  |
+| *         | centos8  | amd64    |ssh c@16.77| *      |  *  | 2.17   |         | amd64  |
 | *         |anolisos8.6| amd64   | *         | *      |  *  | 2.28   |         | amd64  |
 | 飞腾       | uos      | arm64    |           | c      |  u  |        |         |        |
 | 飞腾       | kylinV10 | arm64    | 117396102 | c      |  c@ | 2.29   |         |        |
