@@ -18,18 +18,18 @@ fi
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 
-echo export GO111MODULE=on
-echo export GOPROXY=https://goproxy.cn
-
-pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
-pip3 install reportlab
-pip3 install PyPDF2
-pip3 install pyinstaller
-
-echo pyinstaller -F report.py
-echo ~/.local/bin/pyinstaller -F report.py
-
-# go get github.com/yudai/gotty
-go get github.com/sorenisanerd/gotty
-echo go get github.com/yudai/gotty
-echo go get github.com/sorenisanerd/gotty
+#echo export GO111MODULE=on
+#echo export GOPROXY=https://goproxy.cn
+#
+#pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+#pip3 install reportlab
+#pip3 install PyPDF2
+#pip3 install pyinstaller
+#
+#echo pyinstaller -F report.py
+#echo ~/.local/bin/pyinstaller -F report.py
+#
+## go get github.com/yudai/gotty
+#go get github.com/sorenisanerd/gotty
+#echo go get github.com/yudai/gotty
+#echo go get github.com/sorenisanerd/gotty
