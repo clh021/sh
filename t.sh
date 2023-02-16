@@ -25,6 +25,7 @@ export GOPROXY=https://goproxy.cn
 #pip3 install reportlab
 #pip3 install PyPDF2
 #pip3 install pyinstaller
+#pip3 install pyinstaller -i http://pypi.tuna.tsinghua.edu.cn/simple/ --trusted-host pypi.tuna.tsinghua.edu.cn
 #
 #echo pyinstaller -F report.py
 #echo ~/.local/bin/pyinstaller -F report.py
