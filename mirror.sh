@@ -33,6 +33,25 @@ if is_wsl; then
     echo "WSL DETECTED: OH No!"
     exit 1
 fi
+check_files () {
+    # 接收文件路径数组参数
+    file_paths=("$@")
+    # 遍历数组中的每个文件路径
+    for file_path in "${file_paths[@]}"
+    do
+        # 判断文件是否存在
+        if [ -e "$file_path" ]; then
+            # 如果存在则返回该文件路径并退出函数
+            echo "$file_path"
+            return
+        fi
+    done
+    # 如果全部都不存在，则打印数组内容并提示都不存在，退出脚本运行
+    printf '%s\n' "${file_paths[@]}"
+    echo "以上文件都不存在"
+    exit 1
+}
+
 sh_c='sh -c'
 if [ "$user" != 'root' ]; then
     if command_exists sudo; then
@@ -59,12 +78,14 @@ case "$lsb_dist" in
     ;;
 
     debian)
-        $sh_c "cp /etc/apt/sources.list /etc/apt/sources.list.$timefix.bak"
-        $sh_c "sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list"
-        $sh_c "sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list"
+        sources_confs=("/etc/apt/sources.list" "/etc/apt/sources.list.d/debian.sources")
+        sources_conf=$(check_files "${files[@]}")
+        $sh_c "cp $sources_conf $sources_conf.$timefix.bak"
+        $sh_c "sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' $sources_conf"
+        $sh_c "sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' $sources_conf"
         $sh_c "apt-get update -qq >/dev/null"
         $sh_c "apt install -y apt-transport-https;"
-        $sh_c "sed -i 's/http:/https:/g' /etc/apt/sources.list"
+        $sh_c "sed -i 's/http:/https:/g' $sources_conf"
     ;;
 
     arch)
