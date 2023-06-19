@@ -26,7 +26,9 @@ FROM alpine:latest
 MAINTAINER leehom Chen <clh021@gmail.com>
 RUN wget https://gitee.com/clh21/sh/raw/master/mirror.sh && sh ./mirror.sh; rm -f mirror.sh
 RUN apk update\
-    && apk add git
+    && apk add git npm golang-go
+RUN yarn config set registry https://registry.npm.taobao.org/
+ENV GOPROXY=https://goproxy.cn,direct
 ```
 ##### 测试记录
 - [x] archlinux
