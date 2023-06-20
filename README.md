@@ -33,6 +33,12 @@ ENV GOPROXY=https://goproxy.cn,direct
 ##### 测试记录
 - [x] archlinux
 - [x] debian(buster|10,bullseye|11)
+- [x] debian(bookworm|12)
+```bash
+# debian bookworm 的 docker 中既没有 wget 也没有 curl
+RUN sed -i s/deb.debian.org/mirrors.ustc.edu.cn/g /etc/apt/sources.list.d/debian.sources
+RUN sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g /etc/apt/sources.list.d/debian.sources
+```
 - [x] alpine(3.12,3.11)
 - [x] ubuntu(16.04)
 - [ ] centos
