@@ -28,6 +28,7 @@ RUN wget https://gitee.com/clh21/sh/raw/master/mirror.sh && sh ./mirror.sh; rm -
 RUN apk update\
     && apk add git npm golang-go
 RUN yarn config set registry https://registry.npmmirror.com
+RUN npm config set sass_binary_site=https://npm.taobao.org/mirrors/node-sass
 ENV GOPROXY=https://goproxy.cn,direct
 ```
 ##### 测试记录
