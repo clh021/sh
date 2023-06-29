@@ -29,6 +29,16 @@ RUN apk update\
     && apk add git npm golang-go
 RUN yarn config set registry https://registry.npmmirror.com
 RUN npm config set sass_binary_site=https://npm.taobao.org/mirrors/node-sass
+RUN npm i node-sass --sass_binary_site=https://npm.taobao.org/mirrors/node-sass
+RUN npm config set sass_binary_path=/YOUR_LOCAL_PATH/win32-x64-57_binding.node
+RUN npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/
+RUN npm config set sharp_dist_base_url https://npm.taobao.org/mirrors/sharp-libvips/
+RUN npm config set electron_mirror https://npm.taobao.org/mirrors/electron/
+RUN npm config set puppeteer_download_host https://npm.taobao.org/mirrors/
+RUN npm config set phantomjs_cdnurl https://npm.taobao.org/mirrors/phantomjs/
+RUN npm config set sentrycli_cdnurl https://npm.taobao.org/mirrors/sentry-cli/
+RUN npm config set sqlite3_binary_site https://npm.taobao.org/mirrors/sqlite3/
+RUN npm config set python_mirror https://npm.taobao.org/mirrors/python/
 ENV GOPROXY=https://goproxy.cn,direct
 ```
 ##### 测试记录
