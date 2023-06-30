@@ -39,6 +39,7 @@ RUN npm config set phantomjs_cdnurl https://npm.taobao.org/mirrors/phantomjs/
 RUN npm config set sentrycli_cdnurl https://npm.taobao.org/mirrors/sentry-cli/
 RUN npm config set sqlite3_binary_site https://npm.taobao.org/mirrors/sqlite3/
 RUN npm config set python_mirror https://npm.taobao.org/mirrors/python/
+RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ENV GOPROXY=https://goproxy.cn,direct
 ```
 ##### 测试记录
