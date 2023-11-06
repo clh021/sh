@@ -11,7 +11,8 @@ exec shell script by curl
 ```sh
 curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sudo sh  #debian...
 curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sh  #archlinux...
-wget https://gitee.com/clh21/sh/raw/master/mirror.sh && sh ./mirror.sh; rm -f mirror.sh #alpine...
+wget -qO- https://gitee.com/clh21/sh/raw/master/mirror.sh | sh #alpine...
+
 ```
 自己构建 docker 镜像时，也可以一行代码实现加速
 ```Dockerfile
@@ -24,7 +25,7 @@ RUN curl -sSL https://gitee.com/clh21/sh/raw/master/mirror.sh | sh
 ```Dockerfile
 FROM alpine:latest
 MAINTAINER leehom Chen <clh021@gmail.com>
-RUN wget https://gitee.com/clh21/sh/raw/master/mirror.sh && sh ./mirror.sh; rm -f mirror.sh
+RUN wget -qO- https://gitee.com/clh21/sh/raw/master/mirror.sh | sh
 RUN apk update\
     && apk add git npm golang-go
 RUN yarn config set registry https://registry.npmmirror.com
