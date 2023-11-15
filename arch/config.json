@@ -6,12 +6,12 @@
   ],
   "archinstall-language": "English",
   "audio": "pipewire",
-  "bootloader": "grub-install",
+  "bootloader": "Grub",
   "custom-commands": [
     "systemctl enable sshd",
-    "systemctl enable docker",
-    "usermod -aG docker $USER",
     "systemctl enable sddm",
+    "systemctl enable docker",
+    "usermod -aG docker lee",
     "chsh -s /bin/zsh lee"
   ],
   "filesystem": "btrfs",
