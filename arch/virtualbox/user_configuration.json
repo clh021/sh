@@ -1,0 +1,155 @@
+{
+    "additional-repositories": [
+        "multilib"
+    ],
+    "archinstall-language": "English",
+    "audio": "pipewire",
+    "audio_config": null,
+    "bootloader": "Grub",
+    "config_version": "2.5.1",
+    "custom-commands": [
+        "systemctl enable sshd",
+        "systemctl enable sddm",
+        "systemctl enable docker",
+        "usermod -aG docker lee",
+        "chsh -s /bin/zsh lee"
+    ],
+    "debug": false,
+    "disk_layouts": "disk-layouts.json",
+    "filesystem": "btrfs",
+    "gfx_driver": "All open-source (default)",
+    "harddrives": [
+        "$DRIVE"
+    ],
+    "hostname": "lee",
+    "kernels": [
+        "linux-hardened",
+        "linux-zen"
+    ],
+    "keyboard-language": "us",
+    "keyboard-layout": "us",
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US"
+    },
+    "mirror-region": {
+        "China": {
+            "https://mirror.redrock.team/archlinux/$repo/os/$arch": true,
+            "https://mirrors.aliyun.com/archlinux/$repo/os/$arch": true,
+            "https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.hit.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.nju.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.njupt.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.shanghaitech.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch": true,
+            "https://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch": true
+        }
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "China": [
+                "https://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.shanghaitech.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.qlu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.nju.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.jlu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.hit.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch",
+                "https://mirrors.aliyun.com/archlinux/$repo/os/$arch",
+                "https://mirror.redrock.team/archlinux/$repo/os/$arch",
+                "https://mirror.nyist.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.zju.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.shanghaitech.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.nju.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.jlu.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.hit.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirrors.aliyun.com/archlinux/$repo/os/$arch",
+                "http://mirrors.163.com/archlinux/$repo/os/$arch",
+                "http://mirror.redrock.team/archlinux/$repo/os/$arch",
+                "http://mirror.nyist.edu.cn/archlinux/$repo/os/$arch",
+                "http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "nic": {
+        "NetworkManager": true,
+        "nic": "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE)"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [
+        "zip",
+        "ripgrep",
+        "axel",
+        "htop",
+        "virtualbox",
+        "wget",
+        "tk",
+        "p7zip",
+        "ark",
+        "lrzip",
+        "zsh",
+        "unarchiver",
+        "git",
+        "openssh",
+        "tree",
+        "docker-compose",
+        "neovim",
+        "fzf",
+        "bat",
+        "bash",
+        "docker",
+        "zsh-syntax-highlighting",
+        "jq",
+        "unzip",
+        "git-delta",
+        "flameshot",
+        "unrar",
+        "mosh",
+        "binutils",
+        "tmux",
+        "lzop",
+        "fd",
+        "gpick",
+        "zsh-autosuggestions"
+    ],
+    "parallel downloads": 0,
+    "profile": {
+        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
+    },
+    "profile_config": null,
+    "script": "guided",
+    "services": [
+        "NetworkManager.service",
+        "docker.service"
+    ],
+    "silent": false,
+    "swap": false,
+    "sys-encoding": "utf-8",
+    "sys-language": "en_US",
+    "timezone": "Asia/Shanghai",
+    "version": "2.6.3"
+}
