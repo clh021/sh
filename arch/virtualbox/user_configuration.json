@@ -101,7 +101,14 @@
     "lzop",
     "fd",
     "gpick",
-    "zsh-autosuggestions"
+    "zsh-autosuggestions",
+    "xorg-server",
+    "plasma-desktop",
+    "sddm-kcm",
+    "konsole",
+    "kdeconnect",
+    "sshfs",
+    "dolphin-plugins"
   ],
   "parallel downloads": 0,
   "profile_config": null,
