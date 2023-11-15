@@ -3,53 +3,87 @@
         "multilib"
     ],
     "archinstall-language": "English",
-    "audio": "pipewire",
-    "audio_config": null,
-    "bootloader": "Grub",
-    "config_version": "2.5.1",
-    "custom-commands": [
-        "systemctl enable sshd",
-        "systemctl enable sddm",
-        "systemctl enable docker",
-        "usermod -aG docker lee",
-        "chsh -s /bin/zsh lee"
-    ],
+    "bootloader": "Systemd-boot",
+    "config_version": "2.6.3",
     "debug": false,
-    "disk_layouts": "disk-layouts.json",
-    "filesystem": "btrfs",
-    "gfx_driver": "All open-source (default)",
-    "harddrives": [
-        "$DRIVE"
-    ],
-    "hostname": "lee",
+    "disk_config": {
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/sda",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "Boot",
+                            "ESP"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "70ae91bb-fde6-4c34-a946-4a0b8e2dfe27",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 512
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "mount_options": [],
+                        "mountpoint": "/",
+                        "obj_id": "60291ace-d59c-4e7e-8e61-e97734a7c074",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 15568207872
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 513
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "disk_encryption": null,
+    "hostname": "archbox",
     "kernels": [
         "linux-hardened",
         "linux-zen"
     ],
-    "keyboard-language": "us",
-    "keyboard-layout": "us",
     "locale_config": {
         "kb_layout": "us",
         "sys_enc": "UTF-8",
         "sys_lang": "en_US"
-    },
-    "mirror-region": {
-        "China": {
-            "https://mirror.redrock.team/archlinux/$repo/os/$arch": true,
-            "https://mirrors.aliyun.com/archlinux/$repo/os/$arch": true,
-            "https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.hit.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.nju.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.njupt.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.shanghaitech.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch": true,
-            "https://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch": true
-        }
     },
     "mirror_config": {
         "custom_mirrors": [],
@@ -93,62 +127,15 @@
     "network_config": {
         "type": "nm"
     },
-    "nic": {
-        "NetworkManager": true,
-        "nic": "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE)"
-    },
     "no_pkg_lookups": false,
     "ntp": true,
     "offline": false,
-    "packages": [
-        "zip",
-        "ripgrep",
-        "axel",
-        "htop",
-        "wget",
-        "tk",
-        "p7zip",
-        "ark",
-        "lrzip",
-        "zsh",
-        "unarchiver",
-        "git",
-        "openssh",
-        "tree",
-        "docker-compose",
-        "neovim",
-        "fzf",
-        "bat",
-        "bash",
-        "docker",
-        "zsh-syntax-highlighting",
-        "jq",
-        "unzip",
-        "git-delta",
-        "flameshot",
-        "unrar",
-        "mosh",
-        "binutils",
-        "tmux",
-        "lzop",
-        "fd",
-        "gpick",
-        "zsh-autosuggestions"
-    ],
+    "packages": [],
     "parallel downloads": 0,
-    "profile": {
-        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
-    },
     "profile_config": null,
     "script": "guided",
-    "services": [
-        "NetworkManager.service",
-        "docker.service"
-    ],
     "silent": false,
-    "swap": false,
-    "sys-encoding": "utf-8",
-    "sys-language": "en_US",
+    "swap": true,
     "timezone": "Asia/Shanghai",
     "version": "2.6.3"
 }
