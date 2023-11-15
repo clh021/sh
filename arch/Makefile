@@ -12,13 +12,17 @@ archinstall-git: clean # Install latest version of archinstall
 	git clone https://github.com/archlinux/archinstall .archinstall
 	cd .archinstall && python setup.py install
 
-.PHONY: install
-install: # Run installer using config files
-	python -m archinstall --config config.json --creds creds.json --disk_layouts disk-layouts.json
+.PHONY: install-virtualbox
+install-virtualbox: # Run installer using virtualbox config files
+	python -m archinstall --config virtualbox/user_configuration.json --creds virtualbox/user_credentials.json
 
-.PHONY: dry-run
-dry-run: # Dry run
-	python -m archinstall --config config.json --creds creds.json --disk_layouts=disk-layouts.json --dry-run
+.PHONY: all
+all:
+	echo "coming soon"
+
+.PHONY: test
+test: # Dry run to generate a configuration
+	python -m archinstall --dry-run
 
 .PHONY: clean
 clean:
