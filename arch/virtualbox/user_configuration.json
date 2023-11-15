@@ -5,11 +5,17 @@
   "archinstall-language": "English",
   "bootloader": "Systemd-boot",
   "config_version": "2.6.3",
+  "custom-commands": [
+    "systemctl enable sshd",
+    "systemctl enable sddm",
+    "systemctl enable docker",
+    "usermod -aG docker lee",
+    "chsh -s /bin/zsh lee"
+  ],
   "debug": false,
   "disk_encryption": null,
   "hostname": "archbox",
   "kernels": [
-    "linux-hardened",
     "linux-zen"
   ],
   "locale_config": {
