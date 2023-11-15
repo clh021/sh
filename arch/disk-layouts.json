@@ -1,0 +1,71 @@
+{
+  "/dev/sda": {
+    "partitions": [
+      {
+        "boot": true,
+        "encrypted": false,
+        "filesystem": {
+          "format": "fat32"
+        },
+        "mountpoint": "/boot",
+        "size": "513MB",
+        "start": "5MB",
+        "type": "primary",
+        "wipe": true
+      },
+      {
+        "btrfs": {
+          "subvolumes": [
+            {
+              "compress": false,
+              "mountpoint": "/",
+              "name": "@",
+              "nodatacow": false
+            },
+            {
+              "compress": false,
+              "mountpoint": "/home",
+              "name": "@home",
+              "nodatacow": false
+            },
+            {
+              "compress": false,
+              "mountpoint": "/var/log",
+              "name": "@log",
+              "nodatacow": false
+            },
+            {
+              "compress": false,
+              "mountpoint": "/var/cache/pacman/pkg",
+              "name": "@pkg",
+              "nodatacow": false
+            },
+            {
+              "compress": false,
+              "mountpoint": "/.snapshots",
+              "name": "@snapshots",
+              "nodatacow": false
+            },
+            {
+              "compress": false,
+              "mountpoint": "/var/lib/libvirt",
+              "name": "@vms",
+              "nodatacow": true
+            }
+          ]
+        },
+        "encrypted": true,
+        "filesystem": {
+          "format": "btrfs",
+          "mount_options": ["compress=zstd"]
+        },
+        "mountpoint": "/",
+        "size": "100%",
+        "start": "518MB",
+        "type": "primary",
+        "wipe": true
+      }
+    ],
+    "wipe": true
+  }
+}

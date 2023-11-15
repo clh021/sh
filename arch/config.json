@@ -1,0 +1,89 @@
+{
+  "config_version": "2.5.1",
+  "version": "2.5.1",
+  "additional-repositories": [
+    "multilib"
+  ],
+  "archinstall-language": "English",
+  "audio": "pipewire",
+  "bootloader": "grub-install",
+  "custom-commands": [
+    "systemctl enable sshd",
+    "systemctl enable docker",
+    "usermod -aG docker $USER",
+    "systemctl enable sddm",
+    "chsh -s /bin/zsh lee"
+  ],
+  "filesystem": "btrfs",
+  "gfx_driver": "All open-source (default)",
+  "harddrives": [
+    "$DRIVE"
+  ],
+  "hostname": "$HOSTNAME",
+  "keyboard-layout": "us",
+  "kernels": [
+    "linux"
+  ],
+  "keyboard-language": "us",
+  "mirror-region": {
+    "custom": {
+      "https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.aliyun.com/archlinux/$repo/os/$arch": true
+    }
+  },
+  "nic": {
+    "NetworkManager": true,
+    "nic": "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE)"
+  },
+  "ntp": true,
+  "packages": [
+    "bash",
+    "zsh",
+    "tmux",
+    "bat",
+    "binutils",
+    "exa",
+    "wget",
+    "axel",
+    "tree",
+    "zip",
+    "unzip",
+    "p7zip",
+    "ark",
+    "unrar",
+    "unarchiver",
+    "lzop",
+    "lrzip",
+    "zsh-syntax-highlighting",
+    "zsh-autosuggestions",
+    "openssh",
+    "mosh",
+    "htop",
+    "git",
+    "tk",
+    "git-delta",
+    "neovim",
+    "fd",
+    "fzf",
+    "ripgrep",
+    "jq",
+    "docker",
+    "docker-compose",
+    "flameshot",
+    "gpick",
+    "virtualbox",
+    "virtualbox-host-modules-arch",
+    "virtualbox-guest-utils"
+  ],
+  "services": [
+    "NetworkManager.service",
+    "docker.service"
+  ],
+  "profile": {
+    "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
+  },
+  "sys-encoding": "utf-8",
+  "sys-language": "en_US",
+  "timezone": "Asia/Shanghai"
+}

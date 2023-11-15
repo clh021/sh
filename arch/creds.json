@@ -1,0 +1,11 @@
+{
+    "!encryption-password" : "123",
+    "!root-password": "123",
+    "!users" : [
+        {
+            "username": "leehom",
+            "!password": "123",
+            "sudo": true
+        }
+    ]
+}
