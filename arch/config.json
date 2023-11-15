@@ -26,7 +26,18 @@
   ],
   "keyboard-language": "us",
   "mirror-region": {
-    "custom": {
+    "China": {
+      "https://mirror.redrock.team/archlinux/$repo/os/$arch": true,
+      "https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.cqu.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.hit.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.nju.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.njupt.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.shanghaitech.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch": true,
+      "https://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch": true,
       "https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch": true,
       "https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch": true,
       "https://mirrors.aliyun.com/archlinux/$repo/os/$arch": true
