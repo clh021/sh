@@ -5,14 +5,6 @@
   "archinstall-language": "English",
   "bootloader": "Systemd-boot",
   "config_version": "2.6.3",
-  "custom-commands": [
-    "systemctl enable sshd",
-    "systemctl enable sddm",
-    "systemctl enable docker",
-    "usermod -aG docker lee",
-    "chsh -s /bin/zsh lee",
-    "pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si"
-  ],
   "debug": false,
   "disk_encryption": null,
   "hostname": "archbox",
@@ -117,5 +109,13 @@
   "silent": false,
   "swap": true,
   "timezone": "Asia/Shanghai",
-  "version": "2.6.3"
+  "version": "2.6.3",
+  "custom-commands": [
+    "systemctl enable sshd",
+    "systemctl enable sddm",
+    "systemctl enable docker",
+    "usermod -aG docker lee",
+    "chsh -s /bin/zsh lee",
+    "pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si"
+  ]
 }
