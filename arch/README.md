@@ -18,3 +18,10 @@ make install
 ```bash
 archinstall --dry-run
 ```
+
+## After intall for Yay
+Get yay pkg from https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/x86_64/
+```bash
+sudo pacman -U ./yay-***-x86_64.pkg.tar.zst
+yay -S google-chrome
+```
