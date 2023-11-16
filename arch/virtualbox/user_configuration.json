@@ -110,7 +110,9 @@
     "env",
     "dpkg",
     "wqy-microhei",
-    "wqy-microhei-lite"
+    "wqy-microhei-lite",
+    "fcitx5-im",
+    "fcitx5-chinese-addons"
   ],
   "parallel downloads": 0,
   "profile_config": null,
