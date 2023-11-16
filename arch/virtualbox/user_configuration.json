@@ -105,7 +105,9 @@
     "sshfs",
     "dolphin-plugins",
     "plasma-nm",
-    "plasma-pa"
+    "plasma-pa",
+    "direnv",
+    "env"
   ],
   "parallel downloads": 0,
   "profile_config": null,
