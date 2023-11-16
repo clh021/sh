@@ -125,6 +125,10 @@
     "chsh -s /bin/zsh lee",
     "echo '[Wallet]' >> /home/lee/.config/kwalletrc",
     "echo 'Enabled=fale' >> /home/lee/.config/kwalletrc",
+    "mkdir '/home/lee/.zsh'",
+    "git clone --depth=1 https://gitee.com/Fomalhaut_PsA/zsh-autosuggestions.git '/home/lee/.zsh/zsh-autosuggestions'",
+    "git clone --depth=1 https://gitee.com/Fomalhaut_PsA/zsh-syntax-highlighting.git '/home/lee/.zsh/zsh-syntax-highlighting'",
+    "git clone --depth=1 https://gitee.com/Fomalhaut_PsA/powerlevel10k.git '/home/lee/.zsh/powerlevel10k'",
     "wget -c https://gitee.com/clh21/sh/raw/master/arch/yay-12.1.3-1-x86_64.pkg.tar.zst && pacman -U --noconfirm ./yay-12.1.3-1-x86_64.pkg.tar.zst"
   ]
 }
