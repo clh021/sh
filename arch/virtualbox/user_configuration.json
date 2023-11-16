@@ -101,7 +101,9 @@
     "konsole",
     "kdeconnect",
     "sshfs",
-    "dolphin-plugins"
+    "dolphin-plugins",
+    "plasma-nm",
+    "plasma-pa"
   ],
   "parallel downloads": 0,
   "profile_config": null,
@@ -115,6 +117,8 @@
     "systemctl enable sddm",
     "systemctl enable docker",
     "usermod -aG docker lee",
-    "chsh -s /bin/zsh lee"
+    "chsh -s /bin/zsh lee",
+    "pacman -Sy /root/sh/arch/yay.pkg.tar.zst",
+    "yay -S google-chrome"
   ]
 }
