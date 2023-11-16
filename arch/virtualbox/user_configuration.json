@@ -112,8 +112,7 @@
     "wqy-microhei",
     "wqy-microhei-lite",
     "fcitx5-im",
-    "fcitx5-chinese-addons",
-    "kwalletmanager"
+    "fcitx5-chinese-addons"
   ],
   "parallel downloads": 0,
   "profile_config": null,
@@ -128,6 +127,8 @@
     "systemctl enable docker",
     "usermod -aG docker lee",
     "chsh -s /bin/zsh lee",
+    "echo '[Wallet]' >> /home/lee/.config/kwalletrc",
+    "echo 'Enabled=false' >> /home/lee/.config/kwalletrc",
     "mkdir '/home/lee/.zsh'",
     "git clone --depth=1 https://gitee.com/Fomalhaut_PsA/zsh-autosuggestions.git '/home/lee/.zsh/zsh-autosuggestions'",
     "git clone --depth=1 https://gitee.com/Fomalhaut_PsA/zsh-syntax-highlighting.git '/home/lee/.zsh/zsh-syntax-highlighting'",
