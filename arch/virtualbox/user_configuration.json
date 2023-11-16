@@ -3,6 +3,7 @@
     "multilib"
   ],
   "archinstall-language": "English",
+  "audio": "pipewire",
   "bootloader": "Systemd-boot",
   "config_version": "2.6.3",
   "debug": false,
