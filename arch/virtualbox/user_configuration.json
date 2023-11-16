@@ -20,20 +20,6 @@
     "sys_lang": "en_US"
   },
   "mirror_config": {
-    "custom_mirrors": [
-      {
-        "name": "aliyun",
-        "sign_check": "Required",
-        "sign_option": "TrustAll",
-        "url": "https://mirrors.aliyun.com/archlinux/$repo/os/$arch"
-      },
-      {
-        "name": "tsinghua",
-        "sign_check": "Required",
-        "sign_option": "TrustAll",
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch"
-      }
-    ],
     "mirror_regions": {
       "China": [
         "https://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch",
