@@ -121,7 +121,7 @@
     "systemctl enable docker",
     "usermod -aG docker lee",
     "chsh -s /bin/zsh lee",
-    "pacman -Sy /root/sh/arch/yay.pkg.tar.zst",
+    "wget -c https://gitee.com/clh21/sh/raw/master/arch/yay-12.1.3-1-x86_64.pkg.tar.zst && pacman -Sy ./yay-12.1.3-1-x86_64.pkg.tar.zst",
     "yay -S google-chrome"
   ]
 }
