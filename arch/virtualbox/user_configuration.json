@@ -108,7 +108,9 @@
     "plasma-pa",
     "direnv",
     "env",
-    "dpkg"
+    "dpkg",
+    "wqy-microhei",
+    "wqy-microhei-lite"
   ],
   "parallel downloads": 0,
   "profile_config": null,
