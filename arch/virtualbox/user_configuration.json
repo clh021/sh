@@ -120,6 +120,8 @@
     "systemctl enable docker",
     "usermod -aG docker lee",
     "chsh -s /bin/zsh lee",
+    "echo '[Wallet]' >> /home/lee/.config/kwalletrc",
+    "echo 'Enabled=fale' >> /home/lee/.config/kwalletrc",
     "wget -c https://gitee.com/clh21/sh/raw/master/arch/yay-12.1.3-1-x86_64.pkg.tar.zst && pacman -U --noconfirm ./yay-12.1.3-1-x86_64.pkg.tar.zst"
   ]
 }
