@@ -64,6 +64,8 @@
   "ntp": true,
   "offline": false,
   "packages": [
+    "man-db",
+    "man-pages-zh_cn",
     "zip",
     "ripgrep",
     "axel",
@@ -110,6 +112,8 @@
     "direnv",
     "env",
     "dpkg",
+    "mpg123",
+    "translate-shell",
     "wqy-microhei",
     "wqy-microhei-lite",
     "fcitx5-im",
