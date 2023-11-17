@@ -80,6 +80,7 @@
     "tree",
     "docker-compose",
     "neovim",
+    "xclip",
     "fzf",
     "bat",
     "bash",
@@ -129,7 +130,7 @@
     "chsh -s /bin/zsh lee",
     "echo -e '[Wallet]\nEnabled=false' >> /home/lee/.config/kwalletrc",
     "echo -e 'GTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx\nSDL_IM_MODULE=fcitx\nGLFW_IM_MODULE=ibus' >> /etc/environment",
-    "wget -c https://gitee.com/clh21/sh/raw/master/arch/yay-12.1.3-1-x86_64.pkg.tar.zst && pacman -U --noconfirm ./yay-12.1.3-1-x86_64.pkg.tar.zst",
+    "wget -c https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/x86_64/yay-12.1.3-1-x86_64.pkg.tar.zst && pacman -U --noconfirm ./yay-12.1.3-1-x86_64.pkg.tar.zst",
     "git clone https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd ohmyzsh/tools && REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh"
   ]
 }
