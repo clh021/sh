@@ -110,7 +110,6 @@
     "plasma-nm",
     "plasma-pa",
     "direnv",
-    "env",
     "dpkg",
     "mpg123",
     "translate-shell",
