@@ -116,7 +116,10 @@
     "wqy-microhei",
     "wqy-microhei-lite",
     "fcitx5-im",
-    "fcitx5-chinese-addons"
+    "fcitx5-chinese-addons",
+    "bluez",
+    "bluez-utils",
+    "bluedevil"
   ],
   "parallel downloads": 0,
   "profile_config": null,
@@ -129,6 +132,7 @@
     "systemctl enable sshd",
     "systemctl enable sddm",
     "systemctl enable docker",
+    "systemctl enable bluetooth",
     "usermod -aG docker lee",
     "chsh -s /bin/zsh lee",
     "echo -e '[Wallet]\nEnabled=false' >> /home/lee/.config/kwalletrc",
