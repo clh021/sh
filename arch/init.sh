@@ -10,4 +10,4 @@ wget https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/x86_64/yay-12.1.3-1-x86_64
 git clone https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd ohmyzsh/tools && REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
 
 # install some pkgs
-sudo pacman -S shellcheck zenity
+sudo pacman -S shellcheck zenity keepassxc peek
