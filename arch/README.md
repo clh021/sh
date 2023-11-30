@@ -18,6 +18,8 @@ iwctl --passphrase ${wifi_pwd} station ${device_name} connect ${wifi_name}
 # station wlan0 get-networks               #列出网络 比如想连接YOUR-WIRELESS-NAME这个无线
 # station wlan0 connect YOUR-WIRELESS-NAME #进行连接 输入密码即可
 # exit                                     #成功后exit退出
+
+./getChinaMirror.sh # 自动选择好国内加速镜像
 ```
 
 ## How Get Custom
