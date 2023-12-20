@@ -116,6 +116,7 @@
     "noto-fonts-cjk",
     "fcitx5-im",
     "fcitx5-chinese-addons",
+    "gnu-netcat",
     "bluez",
     "bluez-utils",
     "bluedevil"
