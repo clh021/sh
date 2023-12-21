@@ -7,6 +7,7 @@ wget -c https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/x86_64/yay-12.1.3-1-x86
 sudo pacman -U ./y.zst
 
 yay -S google-chrome
+yay -S visual-studio-code-bin
 
 # install ohmyzsh
 # 不在安装系统时安装，有确认交互操作
@@ -14,3 +15,5 @@ git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd o
 
 # install some pkgs
 sudo pacman -S shellcheck zenity keepassxc peek
+
+echo "请注意设置部分机器的禁止休眠和通电开机"

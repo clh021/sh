@@ -29,10 +29,11 @@ iwctl --passphrase ${wifi_pwd} station ${device_name} connect ${wifi_name}
 archinstall --dry-run
 ```
 
-## After intall for Yay
-Get yay pkg from https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/x86_64/
+
+## After intall for init
+
 ```bash
-sudo pacman -U ./yay-***-x86_64.pkg.tar.zst
-yay -S google-chrome
+./init.system.sh
 ```
-> 注意: archlinux 配置文件中自动安装 yay 后，无法安装google-chrome，是因为 systemd，可以在进入桌面后安装
+
+请注意设置部分机器的禁止休眠和通电开机
