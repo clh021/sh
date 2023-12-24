@@ -8,6 +8,7 @@ sudo pacman -U ./y.zst
 
 yay -S google-chrome
 yay -S visual-studio-code-bin
+yay -S motrix
 
 # install ohmyzsh
 # 不在安装系统时安装，有确认交互操作
