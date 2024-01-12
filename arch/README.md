@@ -37,3 +37,8 @@ archinstall --dry-run
 ```
 
 请注意设置部分机器的禁止休眠和通电开机
+
+字体设置，整体使用 `Noto Sans CJK SC`
+
+终端透明度 39%
+configure yakuake Skin: transparent tabs
