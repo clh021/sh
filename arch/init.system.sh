@@ -16,5 +16,8 @@ git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd o
 
 # install some pkgs
 sudo pacman -S shellcheck zenity keepassxc peek
+# install wps
+sudo yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts
 
 echo "请注意设置部分机器的禁止休眠和通电开机"
+
