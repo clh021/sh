@@ -21,3 +21,7 @@ sudo yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts
 
 echo "请注意设置部分机器的禁止休眠和通电开机"
 
+sudo pacman -S cups
+sudo systemctl start cups.service
+sudo pacman -S system-config-printer
+sudo pacman -S print-manager
