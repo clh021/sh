@@ -18,6 +18,23 @@ git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd o
 sudo pacman -S shellcheck zenity keepassxc peek
 # install wps
 sudo yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts
+# Linux 英文系统下，切换wps界面语言为中文
+# head -n 5 (wps et wpp wpspdf)
+# head -n 5 `which et`
+# 添加环境变量 LANGUAGE=zh_CN
+# sed -i '2iLANGUAGE=zh_CN' 文件路径
+# sed -i '2iLANGUAGE=zh_CN' `which wps`
+# 或者
+#   nano  ~/.config/Kingsoft/Office.conf
+# 将
+# [General]
+# languages=
+# PersistentStatus=0
+# 修改为
+# [General]
+# languages=zh_CN
+# PersistentStatus=0
+# 没有[General]就添加[General]
 
 echo "请注意设置部分机器的禁止休眠和通电开机"
 
