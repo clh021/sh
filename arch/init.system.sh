@@ -15,7 +15,7 @@ yay -S motrix
 git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd ohmyzsh/tools && REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
 
 # install some pkgs
-sudo pacman -S shellcheck zenity keepassxc peek
+sudo pacman -S shellcheck zenity keepassxc peek elisa
 # install wps
 sudo yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts
 # Linux 英文系统下，切换wps界面语言为中文
