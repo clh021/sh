@@ -18,7 +18,7 @@ git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd o
 sudo pacman -S shellcheck zenity keepassxc peek elisa smplayer
 
 # install wps
-sudo yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts
+yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts
 # Linux 英文系统下，切换wps界面语言为中文
 # head -n 5 (wps et wpp wpspdf)
 # head -n 5 `which et`
@@ -36,6 +36,9 @@ sudo yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts
 # languages=zh_CN
 # PersistentStatus=0
 # 没有[General]就添加[General]
+
+# 更好用一点的 sqlite 数据库软件
+yay -S sqlitestudio-plugins
 
 echo "请注意设置部分机器的禁止休眠和通电开机"
 
