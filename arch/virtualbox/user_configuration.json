@@ -119,7 +119,8 @@
     "gnu-netcat",
     "bluez",
     "bluez-utils",
-    "bluedevil"
+    "bluedevil",
+    "convmv"
   ],
   "parallel downloads": 0,
   "profile_config": null,
