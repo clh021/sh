@@ -8,6 +8,7 @@ sudo pacman -U ./y.zst
 
 yay -S google-chrome
 yay -S visual-studio-code-bin
+yay -S wechat-universal-bwrap
 yay -S motrix
 
 # install ohmyzsh
