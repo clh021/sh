@@ -120,7 +120,8 @@
     "bluez",
     "bluez-utils",
     "bluedevil",
-    "convmv"
+    "convmv",
+    "trash-cli"
   ],
   "parallel downloads": 0,
   "profile_config": null,
