@@ -9,7 +9,7 @@ sudo pacman -U ./y.zst
 yay -S google-chrome
 yay -S visual-studio-code-bin
 yay -S wechat-universal-bwrap
-yay -S motrix
+# yay -S motrix # electorn error
 
 # install ohmyzsh
 # 不在安装系统时安装，有确认交互操作
@@ -19,7 +19,7 @@ git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd o
 sudo pacman -S shellcheck zenity keepassxc peek elisa smplayer
 
 # install wps
-yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts
+# yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts # use wps365
 # Linux 英文系统下，切换wps界面语言为中文
 # head -n 5 (wps et wpp wpspdf)
 # head -n 5 `which et`
