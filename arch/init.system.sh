@@ -41,6 +41,10 @@ sudo pacman -S shellcheck zenity keepassxc peek elisa smplayer
 # 更好用一点的 sqlite 数据库软件
 yay -S sqlitestudio-plugins
 
+# 查找重复文件
+sudo pacman -S libheif
+yay -S czkawka-gui-bin
+
 echo "请注意设置部分机器的禁止休眠和通电开机"
 
 sudo pacman -S cups
