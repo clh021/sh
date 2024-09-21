@@ -3,6 +3,7 @@
 
 # install yay
 # 不在安装系统时安装，可能会报错
+# https://aur.archlinux.org/packages/yay 查最新版本号
 wget -c https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/x86_64/yay-12.4.2-1-x86_64.pkg.tar.zst -O y.zst
 sudo pacman -U ./y.zst
 
