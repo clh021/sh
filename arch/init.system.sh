@@ -8,6 +8,7 @@ wget -c https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/x86_64/yay-12.4.2-1-x86
 sudo pacman -U ./y.zst
 
 yay -S google-chrome
+yay -S google-chrome-dev
 yay -S visual-studio-code-bin
 yay -S wechat-universal-bwrap
 # yay -S motrix # electorn error
