@@ -92,7 +92,8 @@
     "bluez-utils",
     "bluedevil",
     "convmv",
-    "trash-cli"
+    "trash-cli",
+    "kwalletmanager"
   ],
   "parallel downloads": 0,
   "profile_config": null,
