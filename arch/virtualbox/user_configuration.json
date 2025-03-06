@@ -55,7 +55,6 @@
     "bash",
     "zsh-syntax-highlighting",
     "zsh-completions",
-    "zsh-autocomplete",
     "jq",
     "unzip",
     "git-delta",
