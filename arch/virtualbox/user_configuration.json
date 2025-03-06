@@ -55,6 +55,7 @@
     "bash",
     "zsh-syntax-highlighting",
     "zsh-completions",
+    "zsh-autocomplete",
     "python-pipx",
     "jq",
     "unzip",
