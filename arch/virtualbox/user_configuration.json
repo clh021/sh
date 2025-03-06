@@ -54,6 +54,8 @@
     "bat",
     "bash",
     "zsh-syntax-highlighting",
+    "zsh-completions",
+    "python-pipx",
     "jq",
     "unzip",
     "git-delta",
