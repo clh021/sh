@@ -1,39 +1,37 @@
 {
-  "additional-repositories": ["multilib"],
-  "archinstall-language": "English",
-  "audio_config": {
-    "audio": "pipewire"
-  },
-  "bootloader": "Systemd-boot",
-  "config_version": "2.6.3",
-  "debug": false,
-  "disk_encryption": null,
-  "hostname": "archbox",
-  "kernels": ["linux-zen"],
-  "locale_config": {
-    "kb_layout": "us",
-    "sys_enc": "UTF-8",
-    "sys_lang": "zh_CN"
-  },
-  "mirror_config": {
-    "mirror_regions": {}
-  },
-  "network_config": {
-    "type": "nm"
-  },
-  "no_pkg_lookups": false,
-  "ntp": true,
-  "offline": false,
-  "packages": ["timeshift"],
-  "parallel downloads": 0,
-  "profile_config": {
-    "profile": "desktop",
-    "desktop": "plasma"
-  },
-  "script": "guided",
-  "silent": false,
-  "swap": true,
-  "timezone": "Asia/Shanghai",
-  "version": "2.6.3",
-  "custom-commands": ["systemctl enable sddm"]
+    "archinstall-language": "English",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Grub",
+    "custom_commands": [],
+    "hostname": "archlinux",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "zh_CN.UTF-8"
+    },
+    "ntp": true,
+    "packages": [],
+    "parallel_downloads": 0,
+    "profile_config": {
+        "gfx_driver": "All open-source",
+        "greeter": "sddm",
+        "profile": {
+            "custom_settings": {
+                "KDE Plasma": {}
+            },
+            "details": [
+                "KDE Plasma"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "services": [],
+    "swap": true,
+    "timezone": "Asia/Shanghai",
+    "version": null
 }
