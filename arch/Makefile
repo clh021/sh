@@ -16,6 +16,10 @@ archinstall-git: clean # Install latest version of archinstall
 install-virtualbox: # Run installer using virtualbox config files
 	python -m archinstall --config virtualbox/user_configuration.json --creds virtualbox/user_credentials.json
 
+.PHONY: install-kde
+install-kde:
+	python -m archinstall --config kde/user_configuration.json --creds kde/user_credentials.json
+
 .PHONY: all
 all:
 	echo "coming soon"
