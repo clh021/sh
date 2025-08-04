@@ -13,6 +13,9 @@ sudo pacman -S --noconfirm \
 	fcitx5-im \
 	librime
 
+echo "正在安装 Fcitx5 主题..."
+yay -S --noconfirm fcitx5-skin-adwaita-dark
+
 # 配置环境变量（避免重复添加）
 if ! grep -q "GTK_IM_MODULE=fcitx" /etc/environment; then
 	echo "配置全局环境变量..."
@@ -58,6 +61,22 @@ Type=Application
 Name=Fcitx5
 Exec=fcitx5 -d
 Comment=Input Method Framework
+EOF
+
+# 写入 classicui.conf 配置
+mkdir -p ~/.config/fcitx5/conf
+cat >~/.config/fcitx5/conf/classicui.conf <<EOF
+# 横向候选列表
+Vertical Candidate List=False
+
+# 禁止字体随着 DPI 缩放， 避免界面太大
+PerScreenDPI=False
+
+# 字体和大小， 可以用 fc-list 命令来查看使用
+Font="Noto Sans Mono 13"
+
+# Gnome3 风格的主题
+Theme=adwaita-dark
 EOF
 
 echo "安装完成！请执行以下操作："
