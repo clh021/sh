@@ -13,8 +13,21 @@ sudo pacman -S --noconfirm \
 	fcitx5-im \
 	librime
 
-echo "正在安装 Fcitx5 主题..."
-yay -S --noconfirm fcitx5-skin-adwaita-dark
+echo "正在安装 Fcitx5 主题和 Rime-ice 输入方案..."
+yay -S --noconfirm fcitx5-skin-adwaita-dark rime-ice-git
+
+# 创建 Rime 用户配置目录
+mkdir -p ~/.local/share/fcitx5/rime
+
+# 首次运行时创建默认配置（保证输入法设置生效）
+if [ ! -f ~/.local/share/fcitx5/rime/default.custom.yaml ]; then
+	cat >~/.local/share/fcitx5/rime/default.custom.yaml <<EOF
+patch:
+  "menu/page_size": 9
+  schema_list:
+    - schema: rime_ice
+EOF
+fi
 
 # 配置环境变量（避免重复添加）
 if ! grep -q "GTK_IM_MODULE=fcitx" /etc/environment; then
