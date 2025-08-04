@@ -26,8 +26,33 @@ patch:
   "menu/page_size": 9
   schema_list:
     - schema: rime_ice
+  # 加载自定义词库
+  "translator/dictionary":
+    - mylife
+    - mywork
 EOF
 fi
+
+# 写入个人生活词库 mylife.dict.yaml
+cat >~/.local/share/fcitx5/rime/mylife.dict.yaml <<EOF
+---
+name: mylife
+version: "1"
+sort: by_weight
+...
+陈尚亦	chen shang yi	1
+平丽	ping li	1
+EOF
+
+# 写入工作词库 mywork.dict.yaml
+cat >~/.local/share/fcitx5/rime/mywork.dict.yaml <<EOF
+---
+name: mywork
+version: "1"
+sort: by_weight
+...
+锂钠氪锶	li na ke si	1
+EOF
 
 # 配置环境变量（避免重复添加）
 if ! grep -q "GTK_IM_MODULE=fcitx" /etc/environment; then
