@@ -30,6 +30,31 @@ else
 	echo "环境变量已存在，跳过配置"
 fi
 
+# 配置用户级环境变量
+echo "配置用户级环境变量..."
+cat >~/.pam_environment <<EOF
+GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+XMODIFIERS=@im=fcitx5
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus
+LANG=zh_CN.UTF-8
+LC_CTYPE=zh_CN.UTF-8
+EOF
+
+# 配置 .xprofile
+echo "配置 .xprofile..."
+cat >~/.xprofile <<EOF
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx5"
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=ibus
+export LANG="zh_CN.UTF-8"
+export LC_CTYPE="zh_CN.UTF-8"
+fcitx5 &
+EOF
+
 # 创建用户级配置目录
 mkdir -p ~/.config/fcitx5
 cat >~/.config/fcitx5/profile <<EOF
@@ -77,6 +102,16 @@ Font="Noto Sans Mono 13"
 
 # Gnome3 风格的主题
 Theme=adwaita-dark
+
+# 关闭输入法信息提示
+ShowInputMethodInformation=False
+ShowInputMethodInformationWhenFocusIn=False
+
+# 候选词数量
+CandidateWordCount=9
+
+# 鼠标翻页
+UseMouseForPaging=True
 EOF
 
 echo "安装完成！请执行以下操作："
