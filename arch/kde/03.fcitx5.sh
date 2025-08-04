@@ -58,10 +58,10 @@ EOF
 if ! grep -q "GTK_IM_MODULE=fcitx" /etc/environment; then
 	echo "配置全局环境变量..."
 	sudo bash -c 'cat << EOF >> /etc/environment
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-SDL_IM_MODULE=fcitx
+GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+XMODIFIERS=@im=fcitx5
+SDL_IM_MODULE=fcitx5
 GLFW_IM_MODULE=ibus
 EOF'
 else
@@ -74,7 +74,7 @@ cat >~/.pam_environment <<EOF
 GTK_IM_MODULE=fcitx5
 QT_IM_MODULE=fcitx5
 XMODIFIERS=@im=fcitx5
-SDL_IM_MODULE=fcitx
+SDL_IM_MODULE=fcitx5
 GLFW_IM_MODULE=ibus
 LANG=zh_CN.UTF-8
 LC_CTYPE=zh_CN.UTF-8
@@ -86,7 +86,7 @@ cat >~/.xprofile <<EOF
 export GTK_IM_MODULE=fcitx5
 export QT_IM_MODULE=fcitx5
 export XMODIFIERS="@im=fcitx5"
-export SDL_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx5
 export GLFW_IM_MODULE=ibus
 export LANG="zh_CN.UTF-8"
 export LC_CTYPE="zh_CN.UTF-8"
