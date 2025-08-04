@@ -1,4 +1,5 @@
 # archinstall-config
+
 My archinstall config
 
 ## Usage
@@ -25,15 +26,25 @@ iwctl --passphrase ${wifi_pwd} station ${device_name} connect ${wifi_name}
 ## How Get Custom
 
 运行后可修改选项，然后保存即可得到配置文件
+
 ```bash
 archinstall --dry-run
 ```
 
-
-## After intall for init
+## After install
 
 ```bash
-./init.system.sh
+cd kde
+./01.mirrorlist.sh
+./02.fonts.sh
+./03.fcitx5.sh
+./04.soft.sh
+./09.ohmyzsh.sh
+./10.docker.sh
+./11.virtualbox.sh
+./12.yay_soft.sh
+./18.wps.sh
+./19.printer.sh
 ```
 
 请注意设置部分机器的禁止休眠和通电开机
