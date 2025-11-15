@@ -14,7 +14,7 @@ sudo pacman -S --noconfirm \
 	librime
 
 echo "正在安装 Fcitx5 主题和 Rime-ice 输入方案..."
-yay -S --noconfirm fcitx5-skin-adwaita-dark rime-ice-git
+yay -S --noconfirm fcitx5-skin-adwaita-dark rime-ice-pinyin-git
 
 # 创建 Rime 用户配置目录
 mkdir -p ~/.local/share/fcitx5/rime
