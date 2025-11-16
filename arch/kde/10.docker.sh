@@ -15,6 +15,7 @@ echo "将当前用户加入 docker 用户组（需重新登录生效）..."
 sudo usermod -aG docker "$USER"
 
 echo "拷贝全部默认配置到 docker 配置目录，可根据机器时机情况适当删改"
+sudo mkdir -p /etc/docker
 sudo cp ~/.docker/etc.docker.daemon.json /etc/docker/daemon.json
 
 echo "重启 Docker 服务以应用配置..."

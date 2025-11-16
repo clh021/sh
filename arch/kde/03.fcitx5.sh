@@ -25,7 +25,7 @@ if [ ! -f ~/.local/share/fcitx5/rime/default.custom.yaml ]; then
 patch:
   "menu/page_size": 9
   schema_list:
-    - schema: rime_ice
+    - schema: rime_ice_pinyin
   # 加载自定义词库
   "translator/dictionary":
     - mylife
