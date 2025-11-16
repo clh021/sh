@@ -2,6 +2,9 @@
 # leehom Chen clh021@gmail.com
 # install wps
 # yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts # use wps365
+yay -S libtiff5 cups libjpeg-turbo pango curl ttf-wps-fonts ttf-ms-fonts
+yay -S wps-office-fonts wps-office-mime wps-office-mui-zh-cn
+
 # Linux 英文系统下，切换wps界面语言为中文
 # head -n 5 (wps et wpp wpspdf)
 # head -n 5 `which et`
