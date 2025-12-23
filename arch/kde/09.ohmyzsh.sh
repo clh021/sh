@@ -3,9 +3,7 @@
 # 检查并安装 oh-my-zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	echo "oh-my-zsh 未安装，正在安装..."
-	# git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh"
-	# git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd ohmyzsh/tools && REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
-	git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git "$HOME/.oh-my-zsh"
+	git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd ohmyzsh/tools && REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
 else
 	echo "oh-my-zsh 已安装"
 fi
