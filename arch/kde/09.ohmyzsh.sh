@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# 检查并安装 oh-my-zsh
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-	echo "oh-my-zsh 未安装，正在安装..."
-	git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd ohmyzsh/tools && REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
-else
-	echo "oh-my-zsh 已安装"
-fi
-
 # 检查并安装 zsh
 if ! command -v zsh &>/dev/null; then
 	echo "zsh 未安装，正在安装..."
@@ -31,6 +23,14 @@ if ! command -v zsh &>/dev/null; then
 	fi
 else
 	echo "zsh 已安装"
+fi
+
+# 检查并安装 oh-my-zsh
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+	echo "oh-my-zsh 未安装，正在安装..."
+	git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git && cd ohmyzsh/tools && REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
+else
+	echo "oh-my-zsh 已安装"
 fi
 
 # 切换默认 shell 到 zsh
