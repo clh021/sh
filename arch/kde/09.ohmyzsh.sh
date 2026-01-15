@@ -21,6 +21,8 @@ if ! command -v zsh &>/dev/null; then
 		sudo dnf install -y zsh
 	elif command -v pacman &>/dev/null; then
 		sudo pacman -Sy --noconfirm zsh
+	elif command -v apk &>/dev/null; then
+		sudo apk add zsh
 	elif command -v brew &>/dev/null; then
 		brew install zsh
 	else
