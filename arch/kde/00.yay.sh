@@ -14,7 +14,8 @@ VER=$(curl -s https://gitee.com/api/v5/repos/mirrors_Jguer/yay/tags?sort=updated
 ##PKGINFO=$(curl -s "${AUR_URL}/cgit/aur.git/plain/PKGBUILD?h=${PKGBASE}")
 ##VERSION=$(echo "$PKGINFO" | grep -m1 "^pkgver=" | cut -d= -f2)
 ##RELEASE=$(echo "$PKGINFO" | grep -m1 "^pkgrel=" | cut -d= -f2)
-PKGNAME="${PKGBASE}-${VERSION}-${RELEASE}-x86_64.pkg.tar.zst"
+##PKGNAME="${PKGBASE}-${VERSION}-${RELEASE}-x86_64.pkg.tar.zst"
+PKGNAME="yay-12.5.7-1-x86_64.pkg.tar.zst"
 DOWNLOAD_URL="https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/x86_64/${PKGNAME}"
 
 echo $DOWNLOAD_URL
